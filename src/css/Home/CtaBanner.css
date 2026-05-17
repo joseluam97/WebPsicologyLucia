@@ -1,0 +1,43 @@
+.cta-banner-section {
+  background-color: #cfa87f; /* Color arena/tierra */
+  padding: 2rem;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner-content p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.btn-secondary {
+  background-color: #fdfdfd;
+  color: #cfa87f;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.btn-secondary:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

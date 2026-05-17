@@ -1,0 +1,20 @@
+.contact-section {
+  background-color: #dd6a5d; /* Color coral/salmón */
+  color: #ffffff;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-style: italic; /* Basado en la tipografía de la imagen */
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}

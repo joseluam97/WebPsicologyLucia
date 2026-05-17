@@ -1,0 +1,238 @@
+/* --- Utilidades de Color basadas en la web original --- */
+.bg-green-mint { background-color: #c3d9c9; }
+.bg-sand { background-color: #c8a57a; }
+.bg-beige { background-color: #f2e8d5; }
+.text-center { text-align: center; margin-bottom: 2rem; }
+
+/* --- 1. HERO SECTION --- */
+.ot-hero {
+  padding: 4rem 2rem;
+}
+
+.ot-hero-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ot-hero-text { flex: 1; }
+.ot-hero-text h1 { font-size: 3rem; margin-bottom: 1.5rem; color: #2f4f3f; }
+.ot-hero-text p { font-size: 1.1rem; margin-bottom: 2rem; }
+
+.ot-hero-image { flex: 1; }
+.ot-hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- 2. INTRO SECTION --- */
+.ot-intro {
+  padding: 5rem 2rem;
+  background-color: #ffffff;
+}
+
+.ot-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.ot-intro-text p { margin-bottom: 1.5rem; }
+.ot-intro-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* --- 3 & 6. CTA BANNER --- */
+.ot-cta {
+  padding: 2.5rem 2rem;
+}
+
+.ot-cta-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.ot-cta-content p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.btn-secondary {
+  background-color: #c3d9c9;
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.btn-secondary:hover { background-color: #aebfb4; }
+
+/* --- 4. REQUIREMENTS --- */
+.ot-requirements {
+  padding: 5rem 2rem;
+}
+
+.ot-req-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ot-req-item {
+  text-align: center;
+}
+
+.ot-icon {
+  background-color: #111;
+  color: white;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.ot-icon svg {
+  width: 35px;
+  fill: #ffffff;
+}
+
+/* --- 5. STEPS --- */
+.ot-steps {
+  padding: 3rem 2rem 5rem;
+}
+
+.ot-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ot-step-box {
+  background-color: #f2e8d5;
+  border: 2px solid #ffffff; /* Falso borde para dar efecto de caja anidada si se quiere */
+  border-radius: 20px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.ot-step-box:hover {
+  transform: translateY(-5px);
+}
+
+.ot-step-number {
+  border: 2px solid #111;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.ot-step-text h4 { margin-bottom: 0.5rem; font-family: 'Andada Pro', serif; }
+.ot-step-text p { margin: 0; font-size: 0.95rem; }
+
+/* --- 7. FAQ ACCORDION --- */
+.ot-faq {
+  padding: 5rem 2rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-divider {
+  border: none;
+  border-top: 2px solid #2f4f3f;
+  width: 50%;
+  margin: 0 auto 3rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: #f2e8d5;
+  border: none;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: 'Andada Pro', serif;
+  font-weight: 600;
+  color: #2f4f3f;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover, .faq-question.active {
+  background-color: #e5d8c3;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background-color: transparent;
+  padding: 0 1.5rem;
+}
+
+.faq-answer.open {
+  max-height: 300px;
+  padding: 1.5rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .ot-hero-container, .ot-intro-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .ot-cta-content {
+    flex-direction: column;
+  }
+  .ot-req-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ot-req-grid {
+    grid-template-columns: 1fr;
+  }
+  .ot-step-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}

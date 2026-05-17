@@ -1,0 +1,158 @@
+/* --- Header Principal --- */
+.site-header {
+  background-color: var(--bg-color);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Ancho máximo de la web */
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+/* --- Logo y Branding --- */
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+.site-title a {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* --- Navegación de Escritorio --- */
+.main-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-menu a {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.main-menu a:hover,
+.main-menu a.active {
+  color: var(--primary-color);
+}
+
+/* Menú desplegable */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Oculto por defecto */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  min-width: 220px;
+  padding: 0.5rem 0;
+  list-style: none;
+}
+
+.has-dropdown:hover .dropdown-menu {
+  display: block; /* Aparece al pasar el ratón */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+  background-color: var(--bg-secondary);
+}
+
+/* Botón del menú de contacto */
+.btn-contact-menu {
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: opacity 0.3s ease;
+}
+
+.btn-contact-menu:hover {
+  opacity: 0.9;
+}
+
+/* --- Móvil (Oculto en escritorio) --- */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Responsive: Cuando la pantalla es menor a 900px */
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+  
+  .site-navigation {
+    display: none; /* Ocultamos el menú normal */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .site-navigation.open {
+    display: block; /* Se muestra si pulsamos el botón */
+  }
+
+  .main-menu {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-menu a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background-color: var(--bg-secondary);
+  }
+  
+  .has-dropdown:hover .dropdown-menu {
+    display: none; /* En móvil requiere otra lógica que añadiremos luego si quieres */
+  }
+}

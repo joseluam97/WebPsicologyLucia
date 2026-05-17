@@ -1,0 +1,52 @@
+.indications-section {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.indications-section h2 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.indications-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr; /* 3 columnas: centro más ancho para la imagen */
+  gap: 2rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.center-illustration {
+  grid-column: 2;
+  grid-row: 1 / 6; /* Hace que la imagen ocupe todas las filas centrales */
+  display: flex;
+  justify-content: center;
+}
+
+.center-illustration img {
+  max-width: 100%;
+  border-radius: 50%; /* Si quieres que la imagen sea redonda */
+}
+
+.indication-box {
+  background-color: #d2e3d5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Responsive: En móviles se apila todo en una columna */
+@media (max-width: 900px) {
+  .indications-grid {
+    grid-template-columns: 1fr;
+  }
+  .center-illustration {
+    grid-column: 1;
+    grid-row: 1; /* La imagen se pone arriba del todo en móvil */
+    margin-bottom: 2rem;
+  }
+}

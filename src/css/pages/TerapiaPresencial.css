@@ -1,0 +1,181 @@
+/* --- VARIABLES BASE --- */
+:root {
+  --color-primary: #2f4f3f; /* Texto oscuro / Encabezados */
+  --color-secondary: #c3d9c9; /* Verde claro de fondo CTA */
+  --color-accent: #C8A57A; /* Marrón claro / Dorado para botones */
+  --color-text: #334155;
+  --color-bg: #ffffff;
+  --font-main: 'Andada Pro', serif;
+  --font-text: 'Lato', sans-serif;
+}
+
+/* --- GENERAL --- */
+.terapia-page {
+  font-family: var(--font-text);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+}
+
+/* --- CTA BANNER --- */
+.cta-banner {
+  background-color: var(--color-secondary);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta-banner h2 {
+  font-family: var(--font-text);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* --- INFO SECTION --- */
+.info-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* --- BENEFITS SECTION --- */
+.benefits-section {
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit-card {
+  background-color: var(--color-bg);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid var(--color-secondary);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.icon-placeholder {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* --- EFFICACY SECTION --- */
+.efficacy-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+/* --- FAQ SECTION --- */
+.faq-section {
+  max-width: 800px;
+  text-align: center;
+}
+
+.divider {
+  height: 2px;
+  width: 50%;
+  background-color: var(--color-primary);
+  margin: 1rem auto 3rem auto;
+}
+
+.faq-container {
+  text-align: left;
+}
+
+.faq-item {
+  background-color: #F2E8D5;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.faq-item.active {
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.faq-question {
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-main);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.faq-answer {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  font-size: 0.95rem;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+  .hero-section, .info-section, .efficacy-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .efficacy-content {
+    direction: rtl; /* Para poner la imagen arriba en móvil si se desea, o cambiar el orden en flex */
+  }
+  .efficacy-text, .efficacy-image {
+    direction: ltr;
+  }
+}

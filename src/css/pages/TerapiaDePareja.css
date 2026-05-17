@@ -1,0 +1,191 @@
+/* Layout de Secciones Divididas */
+.section-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.section-split > * { 
+  flex: 1; 
+  min-width: 300px; 
+}
+
+.section-split img {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/* Hero Section */
+.hero-image-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero-image {
+  max-width: 600px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Call To Action (CTA) Banner */
+.cta-banner {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1.5rem 20px;
+  flex-wrap: wrap;
+}
+
+.cta-banner p { 
+  margin: 0; 
+  font-weight: 600; 
+  font-family: var(--font-heading); 
+  font-size: 1.1rem; 
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-primary:hover { 
+  opacity: 0.9; 
+}
+
+/* Grid de Beneficios */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-secondary);
+  border-radius: 15px;
+  padding: 2rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+}
+
+.benefit-card p { 
+  margin: 0; 
+  font-weight: 600; 
+  font-size: 0.9rem;
+}
+
+/* Pasos del Proceso Terapéutico */
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 2rem auto 0;
+}
+
+.step-card {
+  background-color: var(--color-accent);
+  padding: 1.5rem;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--color-text);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.step-content h4 { 
+  margin: 0 0 5px 0; 
+}
+
+.step-content p { 
+  margin: 0; 
+  font-size: 0.9rem; 
+}
+
+/* Acordeón de Preguntas Frecuentes (FAQ) */
+.faq-container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.faq-container details {
+  background-color: var(--color-accent);
+  margin-bottom: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.faq-container summary {
+  padding: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-container summary::-webkit-details-marker { 
+  display: none; 
+}
+
+.faq-container summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.faq-container details[open] summary::after { 
+  content: '-'; 
+}
+
+.faq-container p {
+  padding: 0 1.2rem 1.2rem;
+  margin: 0;
+  font-size: 0.95rem;
+}

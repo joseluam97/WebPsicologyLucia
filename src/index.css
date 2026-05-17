@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer base {
+  /* Fuente base y color por defecto para todo el sitio */
+  html {
+    font-family: 'Andada Pro', sans-serif;
+    color: #2b4436; 
+  }
+
+  /* Tamaños globales fijos en píxeles para encabezados */
+  h1 {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+  }
+  h2 {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+  }
+  h3 {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+  }
+  h4 {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  h5 {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  /* Tamaño global fijo en píxeles para párrafos */
+  p {
+    font-family: 'Andada Pro', sans-serif;
+    font-size: 16px;
+    line-height: 1.7; /* Interlineado normal predeterminado */
+  }
 }

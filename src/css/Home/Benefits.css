@@ -1,0 +1,21 @@
+.benefits-section {
+  background-color: #d2e3d5; /* Verde pastel de la captura */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.benefits-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefits-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e2e; /* Tono oscuro para contraste */
+}
+
+.benefits-section p {
+  font-size: 1.1rem;
+  color: #333;
+}

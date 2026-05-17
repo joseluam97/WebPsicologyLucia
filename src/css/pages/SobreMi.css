@@ -1,0 +1,161 @@
+/* =========================================
+   SobreMi.css
+========================================= */
+
+.sobremi-page {
+  /* Asegura que no haya márgenes no deseados entre franjas */
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Hero --- */
+.sobremi-hero {
+  text-align: center;
+  padding: 3rem 20px 1rem;
+}
+
+.sobremi-profile-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- Wrapper de Contenido (Fondo Beige) --- */
+.sobremi-content-wrapper {
+  background-color: var(--color-accent); /* #f2e8d5 heredado del styles.css global */
+  padding: 4rem 20px;
+  width: 100%;
+}
+
+.sobremi-content-inner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sobremi-header-text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sobremi-header-text h1 {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin: 0;
+  font-weight: normal;
+}
+
+.sobremi-header-text b {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.sobremi-bio-text p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* --- Lista de Ayuda --- */
+.sobremi-help-section {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.sobremi-help-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.sobremi-help-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  text-align: left; /* Alinea el texto de los items a la izquierda */
+}
+
+.sobremi-help-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Checkmark personalizado */
+.sobremi-help-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--color-text); /* Color verde oscuro */
+  font-weight: bold;
+}
+
+/* --- CTA Banner --- */
+.sobremi-cta-banner {
+  background-color: var(--color-secondary); /* #c8a57a */
+  color: var(--color-white);
+  padding: 2rem 20px;
+  width: 100%;
+}
+
+.sobremi-cta-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobremi-cta-inner p {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-reservar {
+  background-color: var(--color-primary); /* Botón verde claro */
+  color: var(--color-text);
+  padding: 10px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.btn-reservar:hover {
+  opacity: 0.9;
+}
+
+/* --- Redes Sociales --- */
+.sobremi-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 3rem 20px;
+}
+
+.social-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s;
+}
+
+.social-circle:hover {
+  transform: translateY(-3px);
+}
