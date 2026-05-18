@@ -69,11 +69,11 @@ const Indications = () => {
                 bg-brand-primary border border-brand-secondary/20 
                 p-5 md:p-4 rounded-2xl shadow-lg text-center flex items-center justify-center 
                 w-[80vw] shrink-0 snap-center md:w-full md:shrink max-w-[280px] md:max-w-[260px] min-h-[110px] z-20 
-                hover:-translate-y-1 hover:shadow-xl transition-all duration-300
+                hover:-translate-y-1 hover:shadow-xl transition-all duration-300 m-2
                 ${item.pos}
               `}
             >
-              <p className="text-brand-text leading-snug m-0">
+              <p className="text-brand-text leading-snug">
                 {item.text}
               </p>
             </div>
