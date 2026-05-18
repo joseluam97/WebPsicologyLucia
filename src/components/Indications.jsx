@@ -2,7 +2,7 @@ import React from 'react';
 import centerImage from '../assets/images/terapia-psicologica-fondo-1.svg';
 
 const Indications = () => {
-  // Array con los textos y la "coordenada" de Tailwind para formar el círculo en pantallas grandes
+  // Array con los textos y la "coordenada" de Tailwind para formar el círculo en PC
   const indications = [
     // Arriba
     { text: "Te encuentras triste y sin esperanzas desde hace tiempo", pos: "md:col-start-2 md:row-start-1 md:translate-y-4 md:translate-x-4" },
@@ -27,19 +27,33 @@ const Indications = () => {
     <section className="bg-white py-20 px-6 overflow-hidden w-full">
       <div className="max-w-[1200px] mx-auto">
         
-        {/* El H2 hereda su tamaño (px) desde index.css */}
-        <h2 className="text-brand-dark text-center mb-16">
+        <h2 className="text-brand-dark text-center mb-10 md:mb-16">
           ¿Cuándo es bueno empezar a ir a terapia psicológica?
         </h2>
-        
-        {/* Grid de 4 columnas x 5 filas para crear el lienzo circular */}
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-5 gap-6 relative items-center justify-items-center">
 
-          {/* IMAGEN CENTRAL
-            La clase order-first hace que en móvil se vea arriba del todo.
-            En PC, ocupa el centro exacto (columnas 2-3 y filas 2-4).
+        {/* --- IMAGEN EN MÓVIL --- 
+            La sacamos fuera del grid solo para móviles, para que se quede fija arriba 
+            y las tarjetas se deslicen por debajo de ella. En PC se oculta.
+        */}
+        <div className="flex md:hidden justify-center items-center w-full mb-8">
+          <img 
+            src={centerImage} 
+            alt="Personas en terapia" 
+            className="w-full max-w-[240px] drop-shadow-2xl" 
+          />
+        </div>
+        
+        {/* --- CONTENEDOR HÍBRIDO ---
+            Móvil: flex overflow-x-auto (Carrusel horizontal)
+            PC (md): grid de 4x5 (Tu círculo perfecto)
+            Las clases de scrollbar ocultan la barra de desplazamiento fea del navegador.
+        */}
+        <div className="flex overflow-x-auto gap-4 pb-8 snap-x snap-mandatory md:grid md:grid-cols-4 md:grid-rows-5 md:gap-0 md:pb-0 relative items-center justify-items-center md:overflow-visible [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+
+          {/* IMAGEN CENTRAL EN PC
+              Oculta en móvil (porque ya la pusimos arriba), visible y en el centro exacto en PC.
           */}
-          <div className="order-first md:order-none md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-3 flex justify-center items-center z-10 w-full p-4">
+          <div className="hidden md:flex md:col-start-2 md:col-span-2 md:row-start-2 md:row-span-3 justify-center items-center z-10 w-full p-4">
             <img 
               src={centerImage} 
               alt="Personas en terapia" 
@@ -47,19 +61,18 @@ const Indications = () => {
             />
           </div>
 
-          {/* RENDERIZADO DE LAS CAJAS EN CÍRCULO */}
+          {/* RENDERIZADO DE LAS CAJAS */}
           {indications.map((item, index) => (
             <div 
               key={index} 
               className={`
                 bg-brand-primary border border-brand-secondary/20 
-                p-5 rounded-2xl shadow-lg text-center flex items-center justify-center 
-                w-full max-w-[260px] min-h-[100px] z-20 
+                p-5 md:p-4 rounded-2xl shadow-lg text-center flex items-center justify-center 
+                w-[80vw] shrink-0 snap-center md:w-full md:shrink max-w-[280px] md:max-w-[260px] min-h-[110px] z-20 
                 hover:-translate-y-1 hover:shadow-xl transition-all duration-300
                 ${item.pos}
               `}
             >
-              {/* El <p> hereda su tamaño (px) global y usa el interlineado menor que pediste */}
               <p className="text-brand-text leading-snug m-0">
                 {item.text}
               </p>

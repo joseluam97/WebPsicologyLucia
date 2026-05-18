@@ -21,7 +21,7 @@ const Specialties = () => {
           {/* --- TARJETA 1: Terapia Individual --- */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100">
             {/* Contenedor de la imagen */}
-            <div className="w-full h-[250px] overflow-hidden">
+            <div className="w-full h-[200px] overflow-hidden">
               <img
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 src={img_terapia_individual}
@@ -31,9 +31,9 @@ const Specialties = () => {
 
             {/* Contenido de la tarjeta (textos y botón) */}
             <div className="p-8 flex flex-col flex-grow items-center text-center">
-              <h3 className="text-brand-dark mb-4">Terapia individual</h3>
+              <h3 className="text-brand-dark mb-2">Terapia individual</h3>
               {/* flex-grow en el párrafo empuja el botón hacia abajo si los textos tienen distinto tamaño */}
-              <p className="text-brand-text mb-8 flex-grow leading-relaxed">
+              <p className="text-brand-text mb-4 flex-grow leading-relaxed">
                 La terapia individual es un espacio para ti. Es un momento en tu semana donde un profesional está ahí solo para ti y tu bienestar. En este espacio, te acompañaré y te daré herramientas para afrontar las dificultades que puedan surgir a lo largo de tu vida y aprenderás a gestionarlas mejor.
               </p>
 
@@ -48,7 +48,7 @@ const Specialties = () => {
 
           {/* --- TARJETA 2: Terapia de Pareja --- */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100">
-            <div className="w-full h-[250px] overflow-hidden">
+            <div className="w-full h-[200px] overflow-hidden">
               <img
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 src={img_terapia_parejas}
@@ -57,8 +57,8 @@ const Specialties = () => {
             </div>
 
             <div className="p-8 flex flex-col flex-grow items-center text-center">
-              <h3 className="text-brand-dark mb-4">Terapia de pareja</h3>
-              <p className="text-brand-text mb-8 flex-grow leading-relaxed">
+              <h3 className="text-brand-dark mb-2">Terapia de pareja</h3>
+              <p className="text-brand-text mb-4 flex-grow leading-relaxed">
                 La terapia de pareja es un espacio seguro para ambos. Podremos ver y analizar juntos los problemas de la relación desde un prisma objetivo para ayudaros a entender qué está pasando, recuperar la conexión perdida, mejorar vuestra comunicación y disfrutar de nuevo juntos.
               </p>
 
@@ -73,7 +73,7 @@ const Specialties = () => {
 
           {/* --- TARJETA 3: Terapia Perinatal --- */}
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden flex flex-col border border-gray-100">
-            <div className="w-full h-[250px] overflow-hidden">
+            <div className="w-full h-[200px] overflow-hidden">
               <img
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 src={img_terapia_perinatal}
@@ -82,8 +82,8 @@ const Specialties = () => {
             </div>
 
             <div className="p-8 flex flex-col flex-grow items-center text-center">
-              <h3 className="text-brand-dark mb-4">Terapia perinatal</h3>
-              <p className="text-brand-text mb-8 flex-grow leading-relaxed">
+              <h3 className="text-brand-dark mb-2">Terapia perinatal</h3>
+              <p className="text-brand-text mb-4 flex-grow leading-relaxed">
                 La etapa perinatal abarca desde el deseo de ser madre/padre hasta los primeros años de crianza del bebé. Son momentos de grandes cambios e incertidumbre en los que un apoyo psicológico especializado puede prevenir y tratar dificultades en esta etapa tan vulnerable.
               </p>
 

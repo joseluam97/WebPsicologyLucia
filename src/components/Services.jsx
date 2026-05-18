@@ -22,7 +22,7 @@ const Services = () => {
         <div className="flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-lg mb-12 bg-brand-primary/30">
           
           {/* Contenedor Imagen */}
-          <div className="w-full md:w-1/2 h-[300px] md:h-auto">
+          <div className="w-full md:w-1/2 h-[200px] md:h-auto">
             <img 
               src={presencialImg} 
               alt="Consulta presencial" 
@@ -45,7 +45,7 @@ const Services = () => {
         <div className="flex flex-col md:flex-row-reverse rounded-2xl overflow-hidden shadow-lg bg-brand-primary/30">
           
           {/* Contenedor Imagen */}
-          <div className="w-full md:w-1/2 h-[300px] md:h-auto">
+          <div className="w-full md:w-1/2 h-[200px] md:h-auto">
             <img 
               src={onlineImg} 
               alt="Terapia online" 

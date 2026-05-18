@@ -4,7 +4,7 @@ import heroBg from '../assets/images/terapia-psicologica-1.1-scaled-e17193292885
 
 const Hero = () => {
   return (
-    <section className="relative bg-brand-white min-h-[60vh] flex items-center justify-center overflow-hidden py-16 px-8 w-full">
+    <section className="relative bg-brand-white min-h-[60vh] flex items-center justify-center overflow-hidden py-4 px-4 w-full">
       
       {/* Capa de Fondo (Overlay) */}
       <div 
@@ -13,13 +13,13 @@ const Hero = () => {
       ></div>
       
       {/* Contenedor Principal */}
-      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-14 lg:gap-20 max-w-[1200px] w-full mx-auto">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between gap-0 lg:gap-20 max-w-[1200px] w-full mx-auto">
         
         {/* Contenido Textual */}
         <div className="flex-1 lg:flex-[1.2] max-w-full lg:max-w-[620px] flex flex-col items-center text-center">
           
           {/* El tamaño (48px) y tipografía se heredan globalmente de la etiqueta h1 */}
-          <h1 className="text-brand-dark mb-7">
+          <h1 className="text-brand-dark mb-8">
             Terapia Psicologica
           </h1>
           
@@ -27,7 +27,7 @@ const Hero = () => {
             El interlineado menor se define aquí mismo con la clase 'leading-snug'.
             El color se asigna mediante la variable global de texto 'text-brand-text'.
           */}
-          <p className="text-brand-text leading-snug mb-12">
+          <p className="text-brand-text leading-snug mb-8">
             La terapia psicologica puede ayudarte. Encontrarás el equilibrio y la 
             tranquilidad que necesitas en tu vida diaria. Además, la terapia psicologica 
             está diseñada para ofrecerte un espacio seguro y acogedor. En este espacio, 

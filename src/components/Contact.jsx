@@ -7,11 +7,6 @@ const Contact = () => {
       {/* Contenedor principal: Centrado absoluto en fila (PC) y columna (Móvil) */}
       <div className="max-w-[1200px] w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
         
-        {/* Columna Izquierda: Componente Doctoralia (Ocupa el 50% en escritorio y centrado total) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center">
-          <Doctoralia />
-        </div>
-
         {/* Columna Derecha: Bloque de Texto (Ocupa el 50% en escritorio y centrado total) */}
         <div className="w-full lg:w-1/2 flex flex-col items-center justify-center text-center">
           
@@ -26,6 +21,11 @@ const Contact = () => {
             si soy la profesional adecuada para ayudarte.
           </p>
           
+        </div>
+        
+        {/* Columna Izquierda: Componente Doctoralia (Ocupa el 50% en escritorio y centrado total) */}
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          <Doctoralia />
         </div>
 
       </div>
