@@ -12,9 +12,10 @@ import TerapiaDePareja from './pages/TerapiaDePareja';
 import SobreMi from './pages/SobreMi';
 import Contacto from './pages/Contacto';
 import Blog from './pages/Blog';
-
 import AnsiedadPodcast from './pages-blog/AnsiedadPodcast';
 import AutoestimaAmorPropio from './pages-blog/AutoestimaAmorPropio';
+import ConsultaPsicologia from './pages/ConsultaPsicologia';
+import TiposAyudaPsicologica from './pages/TiposAyudaPsicologica';
 
 import './App.css'; // Tu CSS global
 
@@ -34,9 +35,11 @@ function App() {
         <Route path="/psicologa-lucia-morales" element={<SobreMi />} />
         <Route path="/contacto-terapeuta" element={<Contacto />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/consulta-de-psicologia" element={<ConsultaPsicologia />} />
+        <Route path="/tipos-ayuda-psicologica" element={<TiposAyudaPsicologica />} />
 
-        <Route path="/autoestima-y-amor-propio" element={<AnsiedadPodcast />} />
-        <Route path="/ansiedad-podcast" element={<AutoestimaAmorPropio />} />
+        <Route path="/autoestima-y-amor-propio" element={<AutoestimaAmorPropio />} />
+        <Route path="/ansiedad-podcast" element={<AnsiedadPodcast />} />
       </Routes>
       <Footer />
     </Router>

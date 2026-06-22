@@ -3,9 +3,21 @@ import logoImg from '../assets/images/lucia-morales.webp';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  
+  // Estados para controlar los menús en móvil
+  const [isServiciosOpen, setIsServiciosOpen] = useState(false);
+  const [isTiposTerapiaOpen, setIsTiposTerapiaOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Función que decide qué hacer al hacer clic en el enlace principal
+  const handleDropdownClick = (e, isOpen, setIsOpen) => {
+    if (window.innerWidth < 1024) { // 1024px es el punto de corte 'lg' de Tailwind
+      e.preventDefault(); 
+      setIsOpen(!isOpen);
+    }
   };
 
   return (
@@ -51,16 +63,18 @@ const Header = () => {
             </li>
 
             {/* --- Dropdown: Servicios --- */}
-            {/* Quitamos el flex items-center en móvil para que no se pongan lado a lado */}
             <li className="relative group w-full lg:w-auto">
               <a 
                 href="/consulta-de-psicologia/" 
+                onClick={(e) => handleDropdownClick(e, isServiciosOpen, setIsServiciosOpen)}
                 className="flex items-center justify-between w-full text-brand-text hover:text-brand-orange font-medium transition-colors py-3 lg:py-6 border-b border-gray-100 lg:border-none"
               >
-                Servicios <span className="text-xs">▼</span>
+                Servicios 
+                {/* La flecha girará al hacer clic en móvil o al pasar el ratón en escritorio */}
+                <span className={`text-xs transition-transform duration-300 lg:group-hover:rotate-180 ${isServiciosOpen ? 'rotate-180' : ''}`}>▼</span>
               </a>
-              {/* Restringimos el borde naranja superior solo a escritorio (lg:border-t-2) */}
-              <ul className="flex flex-col w-full lg:w-auto pl-4 lg:pl-0 lg:absolute lg:top-full lg:left-0 lg:hidden lg:group-hover:flex bg-white lg:shadow-lg lg:rounded-b-lg lg:min-w-[260px] transition-all lg:border-t-2 lg:border-brand-orange">
+              {/* Combinación de clases: oculto/visible por estado (móvil) + lg:group-hover:flex (escritorio) */}
+              <ul className={`${isServiciosOpen ? 'flex' : 'hidden'} lg:hidden lg:group-hover:flex flex-col w-full lg:w-auto pl-4 lg:pl-0 lg:absolute lg:top-full lg:left-0 bg-white lg:shadow-lg lg:rounded-b-lg lg:min-w-[260px] transition-all lg:border-t-2 lg:border-brand-orange`}>
                 <li>
                   <a href="/terapia-psicologica-online/" className="block w-full py-2 lg:py-3 lg:px-6 text-brand-text hover:bg-brand-primary/20 hover:text-brand-orange transition-colors">
                     Terapia Psicológica Online
@@ -78,11 +92,13 @@ const Header = () => {
             <li className="relative group w-full lg:w-auto">
               <a 
                 href="/tipos-ayuda-psicologica/" 
+                onClick={(e) => handleDropdownClick(e, isTiposTerapiaOpen, setIsTiposTerapiaOpen)}
                 className="flex items-center justify-between w-full text-brand-text hover:text-brand-orange font-medium transition-colors py-3 lg:py-6 border-b border-gray-100 lg:border-none"
               >
-                Tipos de terapia <span className="text-xs">▼</span>
+                Tipos de terapia 
+                <span className={`text-xs transition-transform duration-300 lg:group-hover:rotate-180 ${isTiposTerapiaOpen ? 'rotate-180' : ''}`}>▼</span>
               </a>
-              <ul className="flex flex-col w-full lg:w-auto pl-4 lg:pl-0 lg:absolute lg:top-full lg:left-0 lg:hidden lg:group-hover:flex bg-white lg:shadow-lg lg:rounded-b-lg lg:min-w-[260px] transition-all lg:border-t-2 lg:border-brand-orange">
+              <ul className={`${isTiposTerapiaOpen ? 'flex' : 'hidden'} lg:hidden lg:group-hover:flex flex-col w-full lg:w-auto pl-4 lg:pl-0 lg:absolute lg:top-full lg:left-0 bg-white lg:shadow-lg lg:rounded-b-lg lg:min-w-[260px] transition-all lg:border-t-2 lg:border-brand-orange`}>
                 <li>
                   <a href="/terapia-individual/" className="block w-full py-2 lg:py-3 lg:px-6 text-brand-text hover:bg-brand-primary/20 hover:text-brand-orange transition-colors">
                     Terapia Individual

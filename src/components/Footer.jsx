@@ -68,7 +68,7 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-6 uppercase tracking-wider text-black">Explorar</h4>
             <ul className="space-y-4 text-black/80">
               <li><a href="/sobre-mi" className="hover:text-brand-secondary transition-colors duration-300">Sobre Mí</a></li>
-              <li><a href="/contacto" className="hover:text-brand-secondary transition-colors duration-300">Contacto</a></li>
+              <li><a href="/contacto-terapeuta" className="hover:text-brand-secondary transition-colors duration-300">Contacto</a></li>
               <li><a href="/blog" className="hover:text-brand-secondary transition-colors duration-300">Blog</a></li>
               <li><a href="/aviso-legal" className="hover:text-brand-secondary transition-colors duration-300">Aviso Legal</a></li>
             </ul>

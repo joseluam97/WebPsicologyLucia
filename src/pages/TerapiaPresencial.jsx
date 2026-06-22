@@ -4,6 +4,7 @@ import FaqAccordion from '../components/FaqAccordion'; // Importamos el componen
 import img1 from '../assets/images/psicologo-en-cadiz-1.jpg';
 import img2 from '../assets/images/psicologo-en-cadiz-2.jpg';
 import img3 from '../assets/images/psicologo-en-cadiz-3.jpg';
+import { Helmet } from 'react-helmet-async';
 
 // --- DATA ---
 const faqs = [
@@ -61,134 +62,154 @@ const CtaBanner = ({ text }) => (
 // --- COMPONENTE PRINCIPAL ---
 export default function TerapiaPresencial() {
   return (
-    <div className="w-full flex flex-col min-h-screen">
-      <main className="flex-grow">
+    <>
+      <Helmet>
+        <meta name="author" content="Lucía Morales Reos" />
+        <meta name="publisher" content="Junio 2026" />
+        <meta name="keywords" content="Psicólogo en Cádiz" />
+        <title>Psicólogo en Cádiz - Lucía Morales Reos</title>
+        <meta name="description" content="Encuentra apoyo con un psicólogo en Cádiz. Mejora tu bienestar emocional y personal con sesiones personalizadas y confidenciales." />
+        <link rel="canonical" href="/psicologo-en-cadiz/" />
+        <meta property="og:locale" content="es_ES" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Psicólogo en Cádiz - Lucía Morales Reos" />
+        <meta property="og:description" content="Encuentra apoyo con un psicólogo en Cádiz. Mejora tu bienestar emocional y personal con sesiones personalizadas y confidenciales." />
+        <meta property="og:url" content="/psicologo-en-cadiz/" />
+        <meta property="og:site_name" content="Lucía Morales Reos" />
+        <meta property="article:modified_time" content="2026-06-13T11:47:49+00:00" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:label1" content="Tiempo de lectura" />
+        <meta name="twitter:data1" content="4 minutos" />
+      </Helmet>
+      <div className="w-full flex flex-col min-h-screen">
+        <main className="flex-grow">
 
-        {/* 1. HEADER / HERO SECTION */}
-        <section className="bg-brand-primary py-16 px-6 flex items-center justify-center min-h-[85vh]">
-          <div className="max-w-[1200px] w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-            <div className="flex-1 text-center lg:text-left space-y-6">
-              <h1 className="text-brand-tittle">
-                Psicólogo en Cádiz: Encuentra el Apoyo para tu Bienestar
-              </h1>
-              <p className="text-brand-text leading-relaxed text-[18px]">
-                El psicólogo en Cádiz ajusta su enfoque a tus necesidades y situaciones personales.
-                Estoy comprometida a ofrecerte un entorno de confianza y apoyo.
-              </p>
-              <p className="text-brand-text leading-relaxed text-[18px]">
-                Colaboraremos para reconocer y enfrentar las áreas clave de tu vida. Utilizaremos
-                un enfoque integral y técnicas eficaces para ayudarte. De esta manera lograras
-                tus metas de bienestar y crecimiento personal.
-              </p>
-            </div>
-            <div className="flex-1 w-full flex justify-center lg:justify-end">
-              <img
-                src={img1}
-                alt="psicólogo en cádiz"
-                className="w-full max-w-[500px] rounded-2xl shadow-xl object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* 2. FIRST CTA */}
-        <CtaBanner text="¿Buscas ayuda? Reserva tu sesión con un terapeuta aquí." />
-
-        {/* 3. WHY IS IT IMPORTANT SECTION */}
-        {/* Usamos flex-row-reverse para alternar la imagen a la izquierda */}
-        <section className="bg-brand-white py-24 px-6">
-          <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20">
-            <div className="flex-1 text-center lg:text-left space-y-6">
-              <h2 className="text-brand-tittle leading-tight">
-                Descubre cómo el apoyo de un psicólogo en Cádiz puede impactar positivamente tu vida.
-              </h2>
-              <h3 className="text-brand-orange text-2xl font-bold">
-                ¿Por qué es importante?
-              </h3>
-              <p className="text-brand-text leading-relaxed text-[17px]">
-                Con el psicólogo en Cádiz, tendrás un espacio seguro y confidencial. Podrás explorar
-                tus pensamientos, emociones y sentimientos. Utilizando técnicas personalizadas,
-                te acompañaré en el proceso. Para que comprendas mejor tu mundo interior y desarrolles
-                nuevas habilidades.
-              </p>
-              <p className="text-brand-text leading-relaxed text-[17px]">
-                Con el acompañamiento de un psicólogo en Cádiz, podrás enfrentar desafíos específicos.
-                Podras trabajar en tu crecimiento personal. Descubriras maneras de mejorar tu bienestar
-                emocional y mental.
-              </p>
-            </div>
-            <div className="flex-1 w-full flex justify-center lg:justify-start">
-              <img
-                src={img2}
-                alt="psicóloga consulta"
-                className="w-full max-w-[500px] rounded-2xl shadow-lg object-cover"
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* 4. HOW CAN IT HELP / BENEFITS GRID */}
-        <section className="bg-brand-main/10 py-24 px-6 border-y border-brand-main/20">
-          <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-center text-brand-tittle mb-16">
-              Cómo un psicólogo en Cádiz puede ayudarte
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {beneficios.map((beneficio, index) => (
-                <div
-                  key={index}
-                  className="bg-brand-white p-8 rounded-2xl shadow-sm text-center border border-brand-main/30 hover:shadow-md transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="w-12 h-12 bg-brand-orange text-brand-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-sm">
-                    ✓
-                  </div>
-                  <p className="text-brand-text font-medium m-0 leading-snug">
-                    {beneficio}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 5. EFFICACY SECTION */}
-        {/* Imagen a la izquierda, texto a la derecha (orden natural flex-row) */}
-        <section className="bg-brand-white py-24 px-6">
-          <div className="max-w-[1200px] mx-auto">
-            <h2 className="text-center text-brand-tittle mb-16 max-w-[900px] mx-auto leading-tight">
-              ¿Funciona el trabajo con un psicólogo en Cádiz? Descubre su efectividad y los beneficios que puede ofrecerte.
-            </h2>
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
-              <div className="flex-1 w-full flex justify-center lg:justify-start">
+          {/* 1. HEADER / HERO SECTION */}
+          <section className="bg-brand-primary py-16 px-6 flex items-center justify-center min-h-[85vh]">
+            <div className="max-w-[1200px] w-full flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+              <div className="flex-1 text-center lg:text-left space-y-6">
+                <h1 className="text-brand-tittle">
+                  Psicólogo en Cádiz: Encuentra el Apoyo para tu Bienestar
+                </h1>
+                <p className="text-brand-text leading-relaxed text-[18px]">
+                  El psicólogo en Cádiz ajusta su enfoque a tus necesidades y situaciones personales.
+                  Estoy comprometida a ofrecerte un entorno de confianza y apoyo.
+                </p>
+                <p className="text-brand-text leading-relaxed text-[18px]">
+                  Colaboraremos para reconocer y enfrentar las áreas clave de tu vida. Utilizaremos
+                  un enfoque integral y técnicas eficaces para ayudarte. De esta manera lograras
+                  tus metas de bienestar y crecimiento personal.
+                </p>
+              </div>
+              <div className="flex-1 w-full flex justify-center lg:justify-end">
                 <img
-                  src={img3}
-                  alt="terapia efectiva"
-                  className="w-full max-w-[400px] rounded-2xl shadow-lg object-cover"
+                  src={img1}
+                  alt="psicólogo en cádiz"
+                  className="w-full max-w-[500px] rounded-2xl shadow-xl object-cover"
                 />
               </div>
+            </div>
+          </section>
+
+          {/* 2. FIRST CTA */}
+          <CtaBanner text="¿Buscas ayuda? Reserva tu sesión con un terapeuta aquí." />
+
+          {/* 3. WHY IS IT IMPORTANT SECTION */}
+          {/* Usamos flex-row-reverse para alternar la imagen a la izquierda */}
+          <section className="bg-brand-white py-24 px-6">
+            <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row-reverse items-center justify-between gap-12 lg:gap-20">
               <div className="flex-1 text-center lg:text-left space-y-6">
+                <h2 className="text-brand-tittle leading-tight">
+                  Descubre cómo el apoyo de un psicólogo en Cádiz puede impactar positivamente tu vida.
+                </h2>
+                <h3 className="text-brand-orange text-2xl font-bold">
+                  ¿Por qué es importante?
+                </h3>
                 <p className="text-brand-text leading-relaxed text-[17px]">
-                  El psicólogo en Cádiz ha demostrado ser muy eficaz en tratar multitud de problemas.
-                  Problemas emocionales, psicológicos y relacionales. Con un enfoque personalizado y
-                  centrado en ti. Te ofrezco un espacio seguro.
+                  Con el psicólogo en Cádiz, tendrás un espacio seguro y confidencial. Podrás explorar
+                  tus pensamientos, emociones y sentimientos. Utilizando técnicas personalizadas,
+                  te acompañaré en el proceso. Para que comprendas mejor tu mundo interior y desarrolles
+                  nuevas habilidades.
                 </p>
                 <p className="text-brand-text leading-relaxed text-[17px]">
-                  Puedes experimentar mejoras significativas en tu bienestar emocional. Trabajar con un
-                  psicólogo en Cádiz no solo proporciona alivio a corto plazo de los síntomas. Ademas,
-                  también fomenta un crecimiento personal duradero.
+                  Con el acompañamiento de un psicólogo en Cádiz, podrás enfrentar desafíos específicos.
+                  Podras trabajar en tu crecimiento personal. Descubriras maneras de mejorar tu bienestar
+                  emocional y mental.
                 </p>
               </div>
+              <div className="flex-1 w-full flex justify-center lg:justify-start">
+                <img
+                  src={img2}
+                  alt="psicóloga consulta"
+                  className="w-full max-w-[500px] rounded-2xl shadow-lg object-cover"
+                />
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* 6. FAQ SECTION (USANDO EL COMPONENTE REUTILIZABLE) */}
-        <FaqAccordion faqs={faqs} bgColor="bg-brand-primary" />
+          {/* 4. HOW CAN IT HELP / BENEFITS GRID */}
+          <section className="bg-brand-main/10 py-24 px-6 border-y border-brand-main/20">
+            <div className="max-w-[1200px] mx-auto">
+              <h2 className="text-center text-brand-tittle mb-16">
+                Cómo un psicólogo en Cádiz puede ayudarte
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {beneficios.map((beneficio, index) => (
+                  <div
+                    key={index}
+                    className="bg-brand-white p-8 rounded-2xl shadow-sm text-center border border-brand-main/30 hover:shadow-md transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="w-12 h-12 bg-brand-orange text-brand-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-sm">
+                      ✓
+                    </div>
+                    <p className="text-brand-text font-medium m-0 leading-snug">
+                      {beneficio}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
-        {/* 7. FINAL CTA */}
-        <CtaBanner text="¡Comienza Tu Viaje Hacia el Bienestar! Contáctame Hoy para Iniciar tu Terapia Presencial." />
+          {/* 5. EFFICACY SECTION */}
+          {/* Imagen a la izquierda, texto a la derecha (orden natural flex-row) */}
+          <section className="bg-brand-white py-24 px-6">
+            <div className="max-w-[1200px] mx-auto">
+              <h2 className="text-center text-brand-tittle mb-16 max-w-[900px] mx-auto leading-tight">
+                ¿Funciona el trabajo con un psicólogo en Cádiz? Descubre su efectividad y los beneficios que puede ofrecerte.
+              </h2>
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
+                <div className="flex-1 w-full flex justify-center lg:justify-start">
+                  <img
+                    src={img3}
+                    alt="terapia efectiva"
+                    className="w-full max-w-[400px] rounded-2xl shadow-lg object-cover"
+                  />
+                </div>
+                <div className="flex-1 text-center lg:text-left space-y-6">
+                  <p className="text-brand-text leading-relaxed text-[17px]">
+                    El psicólogo en Cádiz ha demostrado ser muy eficaz en tratar multitud de problemas.
+                    Problemas emocionales, psicológicos y relacionales. Con un enfoque personalizado y
+                    centrado en ti. Te ofrezco un espacio seguro.
+                  </p>
+                  <p className="text-brand-text leading-relaxed text-[17px]">
+                    Puedes experimentar mejoras significativas en tu bienestar emocional. Trabajar con un
+                    psicólogo en Cádiz no solo proporciona alivio a corto plazo de los síntomas. Ademas,
+                    también fomenta un crecimiento personal duradero.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      </main>
-    </div>
+          {/* 6. FAQ SECTION (USANDO EL COMPONENTE REUTILIZABLE) */}
+          <FaqAccordion faqs={faqs} bgColor="bg-brand-primary" />
+
+          {/* 7. FINAL CTA */}
+          <CtaBanner text="¡Comienza Tu Viaje Hacia el Bienestar! Contáctame Hoy para Iniciar tu Terapia Presencial." />
+
+        </main>
+      </div>
+    </>
   );
 }
